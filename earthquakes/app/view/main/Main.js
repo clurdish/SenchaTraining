@@ -2,12 +2,13 @@ Ext.define('Earthquakes.view.main.Main', {
     extend: 'Ext.panel.Panel',
     xtype: 'main',
     requires: [
-        'Earthquakes.view.main.MainModel',
         'Earthquakes.view.Grid',
         'Earthquakes.view.Map',
-        'Ext.window.Toast',
+        'Earthquakes.view.main.MainController',
+        'Earthquakes.view.main.MainModel',
         'Ext.plugin.Viewport'
     ],
+    controller: 'main',
     viewModel: {
         type: 'main'
     },
@@ -23,22 +24,19 @@ Ext.define('Earthquakes.view.main.Main', {
         },
         split: true,
         listeners: {
-            select: function(map, record) {
-                var data = record.data;
-                var time = Ext.Date.format(data.timestamp, 'F j, g:i a');
-                var s = 'A magnitude ' + data.size + ' earthquake occured ' + data.humanReadableLocation + '.';
-                Ext.toast(s, time, 't'); // Message, title, alignment (top)
-            }
+            select: 'onSelect'
         },
         bind: {
-            store: '{earthquakes}'
+            store: '{earthquakes}',
+            selection: '{earthquake}'
         }
     },
     {
         xtype: 'earthquakesgrid',
         region: 'center',
         bind: {
-            store: '{earthquakes}'
+            store: '{earthquakes}',
+            selection: '{earthquake}'
         }
     }
   ]
