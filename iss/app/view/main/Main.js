@@ -4,7 +4,9 @@ Ext.define('ISS.view.main.Main', {
     requires: [
         'ISS.view.Map',
         'ISS.view.main.MainController',
-        'ISS.view.main.MainModel'
+        'ISS.view.main.MainModel',
+        'ISS.view.Passes',
+        'ISS.view.Astronauts'
     ],
 
     controller: 'main-main', // Create the controller instance
@@ -20,18 +22,18 @@ Ext.define('ISS.view.main.Main', {
             coordinate: '{coordinate}'
         }
     }, {
-        xtype: 'component',
-        html: 'Passes goes here',
-
+        xtype: 'isspasses',
         title: 'Passes',
-        iconCls: 'x-fa fa-list-ul'
-
+        iconCls: 'x-fa fa-list-ul',
+        bind: {
+            store: '{passes}'
+        }
     }, {
-        xtype: 'component',
-        html: 'Astronauts go here',
-
+        xtype: 'issastronauts',
         title: 'Astronauts',
-        iconCls: 'x-fa fa-users'
-
+        iconCls: 'x-fa fa-users',
+        bind: {
+            store: '{astronauts}'
+        }
     }]
 });

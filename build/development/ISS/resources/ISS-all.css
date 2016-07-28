@@ -7902,3 +7902,19 @@ html.x-big {
 .x-grid-column {
     border-bottom: 0;
 }
+/* C:/SenchaTraining/ext-6-premium/iss/sass/src/Application.scss:3 */
+.astronauts .astronaut {
+    height: 70px !important;
+}
+/* C:/SenchaTraining/ext-6-premium/iss/sass/src/Application.scss:5 */
+.astronauts .astronaut .thumbnail {
+    height: 50px;
+    float: left;
+}
+/* C:/SenchaTraining/ext-6-premium/iss/sass/src/Application.scss:9 */
+.astronauts .astronaut .name {
+    font-size: 1.2em;
+    height: 50px;
+    vertical-align: middle;
+    margin: 1em 0 0 3.5em;
+}

@@ -544,6 +544,12 @@ $include-ext-viewport-viewport: dynamic(true);;
 $include-ext-viewport-wp: dynamic(true);;
 $include-ext-viewport-windowsphone: dynamic(true);;
 $include-iss-application: dynamic(true);;
+$include-iss-model-astronaut: dynamic(true);;
+$include-iss-model-pass: dynamic(true);;
+$include-iss-util-thumbnail: dynamic(true);;
+$include-iss-view-astronauts: dynamic(true);;
+$include-iss-view-map: dynamic(true);;
+$include-iss-view-passes: dynamic(true);;
 $include-iss-view-main-main: dynamic(true);;
 $include-iss-view-main-maincontroller: dynamic(true);;
 $include-iss-view-main-mainmodel: dynamic(true);;
@@ -815,3 +821,11 @@ $current-resource-root: $theme-triton-resource-root;
 $relative-image-path-for-uis: $theme-triton-resource-path;
 @import '../../../../../ext/modern/theme-triton/sass/src/grid/HeaderContainer';
 @import '../../../../../ext/modern/theme-triton/sass/src/grid/Grid';
+
+/* including package ISS */
+$ISS-resource-root: '' !default;
+$ISS-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $ISS-resource-root;
+$relative-image-path-for-uis: $ISS-resource-path;
+@import '../../../../../iss/sass/src/Application';
