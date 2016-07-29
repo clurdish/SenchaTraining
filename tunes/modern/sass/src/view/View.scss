@@ -1,0 +1,20 @@
+.valign {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.video{
+  overflow:hidden;
+  white-space:nowrap;
+  height: 60px;
+  img {
+    @extend .valign;
+    width: 90px;
+    float: left;
+  }
+  p {
+    @extend .valign;
+    left: 110px;
+    font-size: 1.1em;
+  }
+}

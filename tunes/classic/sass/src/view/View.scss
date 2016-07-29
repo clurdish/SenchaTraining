@@ -1,0 +1,42 @@
+.video:hover  {
+  -webkit-transform:scale($tunes_animation_zoom); /* Safari and Chrome */
+  -moz-transform:scale($tunes_animation_zoom); /* Firefox */
+  -ms-transform:scale($tunes_animation_zoom); /* IE 9 */
+  -o-transform:scale($tunes_animation_zoom); /* Opera */
+  transform:scale($tunes_animation_zoom);
+}
+.video {
+  -webkit-transition: all $tunes_animation_duration ease; /* Safari and Chrome */
+  -moz-transition: all $tunes_animation_duration ease; /* Firefox */
+  -o-transition: all $tunes_animation_duration ease; /* IE 9 */
+  -ms-transition: all $tunes_animation_duration ease; /* Opera */
+  transition: all $tunes_animation_duration ease;
+  max-width: 100%;
+  float: left;
+  text-align: center;
+  height: $tunes_height;
+  width: $tunes_width;
+  padding: $tunes_padding;
+  background: #FFFFFF;
+  color: $tunes_color;
+  overflow: hidden;
+  border-style: solid;
+  border-color: $tunes_border_color;
+  border-width: $tunes_border_width;
+  margin: $tunes_margin;
+  figure {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+  }
+  figcaption {
+    font-size: 8pt;
+    overflow: hidden;
+  }
+
+}
+.overvideo {
+  border: 6px solid #6AABE1;
+  background: #FFFFFF;
+  color: black;
+}
