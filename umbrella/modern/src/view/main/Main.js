@@ -20,7 +20,14 @@ Ext.define("Umbrella.view.main.Main", {
             rainy: '{rainy}'
         }
     }, {
-        xtype: 'location'
+        xtype: 'location',
+        bind: {
+            rainy: '{rainy}',
+            city: '{displayCity}'
+        },
+        listeners: {
+            usecurrentlocation: 'onUseCurrentLocation'
+        }
     }]
 
 });

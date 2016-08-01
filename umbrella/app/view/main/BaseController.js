@@ -13,6 +13,7 @@ Ext.define('Umbrella.view.main.BaseController', {
         }
 
         vm.bind('{city}', function(city) {
+            vm.set('displayCity', city);
             Umbrella.util.Geocode.determineLocation(city).then(function(ll) {
                 vm.set('location', ll);
             });
@@ -23,6 +24,11 @@ Ext.define('Umbrella.view.main.BaseController', {
                 vm.set('rainy', (data.currently.precipIntensity > 0.001));
             });
         });
+
+        vm.bind('{displayCity}', Ext.Function.createBuffered(function(city) {
+            vm.set('city', city);
+        }, 1000));
+
     },
 
     useCurrentLocation: function() {

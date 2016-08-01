@@ -5,6 +5,10 @@ Ext.define('Umbrella.view.main.MainController', {
 
     initViewModel: function(vm) {
         this.callParent(arguments);
+    },
+
+    onUseCurrentLocation: function(button) {
+        this.useCurrentLocation();
     }
 
 });
